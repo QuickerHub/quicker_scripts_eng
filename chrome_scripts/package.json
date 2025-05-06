@@ -1,0 +1,20 @@
+{
+  "name": "chrome-scripts-parser",
+  "version": "1.0.0",
+  "description": "Chrome scripts parser for converting Manifest V2 to V3",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.23.9",
+    "@babel/traverse": "^7.23.9",
+    "@babel/types": "^7.23.9",
+    "@babel/generator": "^7.23.9",
+    "@types/node": "^20.11.19"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0"
+  }
+} 

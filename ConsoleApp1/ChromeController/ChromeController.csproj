@@ -9,25 +9,25 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <EmbeddedResource Include="Resources\chrome-api.js" />
-	  <EmbeddedResource Include="Resources\test-scripts.js" />
+		<EmbeddedResource Include="Resources\chrome-api.js" />
+		<EmbeddedResource Include="Resources\test-scripts.js" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Jint" Version="4.2.2" />
-	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Jint" Version="4.2.2" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Reference Include="Quicker">
-	    <HintPath>C:\Program Files\Quicker\Quicker.exe</HintPath>
-	  </Reference>
-	  <Reference Include="Quicker.Common">
-	    <HintPath>C:\Program Files\Quicker\Quicker.Common.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Quicker.Public">
-	    <HintPath>C:\Program Files\Quicker\Quicker.Public.dll</HintPath>
-	  </Reference>
+		<Reference Include="Quicker">
+			<HintPath>C:\Program Files\Quicker\Quicker.exe</HintPath>
+		</Reference>
+		<Reference Include="Quicker.Common">
+			<HintPath>C:\Program Files\Quicker\Quicker.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="Quicker.Public">
+			<HintPath>C:\Program Files\Quicker\Quicker.Public.dll</HintPath>
+		</Reference>
 	</ItemGroup>
 
 </Project>

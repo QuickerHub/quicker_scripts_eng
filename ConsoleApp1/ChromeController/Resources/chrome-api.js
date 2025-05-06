@@ -33,9 +33,9 @@ function _callApi(apiName, params, callback) {
 // 定义tabs API
 chrome.tabs = {
     // 基本方法
-    query: function(queryInfo, callback) { return _callApi('tabs_query', queryInfo || {}, callback); },
-    get: function(tabId, callback) { return _callApi('tabs_get', { tabId: tabId }, callback); },
-    create: function(createProperties, callback) { return _callApi('tabs_create', createProperties || {}, callback); },
+    query: function(queryInfo, callback) { return _callApi('api_tabs_query', queryInfo || {}, callback); },
+    get: function(tabId, callback) { return _callApi('api_tabs_get', { tabId: tabId }, callback); },
+    create: function(createProperties, callback) { return _callApi('api_tabs_create', createProperties || {}, callback); },
     
     // 扩展方法
     captureVisibleTab: function(windowId, options, callback) { return _callApi('api_tabs_captureVisibleTab', {windowId: windowId, options: options}, callback); },

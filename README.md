@@ -2,6 +2,10 @@
 
 这个仓库包含用于Quicker的脚本引擎和Chrome API模拟实现。
 
+[Quicker浏览器控制 - 后台命令参考](https://quickerconnectortests.getquicker.cn/docs/commands.html#browser-scripts)
+
+
+
 ## 项目结构
 
 - **ConsoleApp1** - Chrome API桥接回调测试程序

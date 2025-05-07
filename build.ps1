@@ -1,5 +1,6 @@
 # Build the project
-dotnet build ConsoleApp1/ChromeController --configuration Release --output ./publish/ChromeController
+$version = "0.0.2"
+dotnet build ConsoleApp1/ChromeController --configuration Release --output ./publish/ChromeController /p:Version=$version
 
 $dllPath = Get-ChildItem ./publish/ChromeController/ChromeController*.dll | Select-Object -ExpandProperty FullName
 Write-Host "ChromeController DLL path: $dllPath"

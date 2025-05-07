@@ -6,6 +6,8 @@
 		<!--<UseWPF>true</UseWPF>-->
 		<LangVersion>preview</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<Version Condition="'$(Version)' == ''">0.0.0</Version>
+		<AssemblyName>$(MSBuildProjectName).$(Version)</AssemblyName>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -15,6 +17,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Jint" Version="4.2.2" />
+		<PackageReference Include="log4net" Version="3.0.4" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
 

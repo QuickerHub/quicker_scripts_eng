@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using log4net;
 
 namespace ChromeController;
 
@@ -8,6 +9,7 @@ public static class Runner
     // 静态成员存储脚本引擎和Chrome桥接
     private static readonly ScriptEngineWrapper _engine;
     private static readonly ChromeBridge _chrome;
+    private static readonly ILog _logger = LogManager.GetLogger(nameof(ChromeController));
 
     // 静态构造函数，初始化脚本引擎和Chrome桥接
     static Runner()
@@ -21,7 +23,7 @@ public static class Runner
         // 注入日志函数
         _engine.InjectFunction("log", new Action<string>(message =>
         {
-            Console.WriteLine($"[JS日志] {message}");
+            _logger.Info($"[JS日志] {message}");
         }));
     }
 
@@ -45,7 +47,7 @@ public static class Runner
         catch (Exception ex)
         {
             // 记录异常并返回错误信息
-            Console.WriteLine($"执行脚本时出现异常: {ex.Message}");
+            _logger.Error($"执行脚本时出现异常: {ex.Message}", ex);
             
             // 创建包含错误信息的JObject
             var errorResult = new JObject

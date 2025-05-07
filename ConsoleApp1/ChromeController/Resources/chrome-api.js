@@ -17,15 +17,15 @@ function _callApi(apiName, params, callback) {
             // 直接调用回调函数
             try {
                 callback(result);
-                console.log('[JS] 已执行回调');
+                log('[JS] 已执行回调');
             } catch (err) {
-                console.log('[JS] 回调执行错误: ' + err);
+                log('[JS] 回调执行错误: ' + err);
             }
         }
         
         return result;
     } catch (err) {
-        console.log('[JS] API调用错误: ' + err);
+        log('[JS] API调用错误: ' + err);
         return { error: err.toString() };
     }
 }

@@ -1,6 +1,8 @@
 ﻿// Chrome API 桥接回调测试 - MVP版本
 
 using ChromeController;
+using log4net.Config;
+using System.Reflection;
 
 namespace ConsoleApp1
 {
@@ -8,6 +10,9 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            // 初始化log4net
+            XmlConfigurator.Configure(new FileInfo(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "App.config")));
+
             Console.WriteLine("Chrome API 桥接回调测试 - MVP版本");
             Console.WriteLine("===================================");
 

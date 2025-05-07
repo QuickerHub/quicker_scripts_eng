@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp2\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChromeController", "ChromeController\ChromeController.csproj", "{3399176A-1119-4EE4-9E63-A56DC7888B8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickerChromeController", "QuickerChromeController\QuickerChromeController.csproj", "{8944F261-4F5C-418B-9F43-8176262A996A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3399176A-1119-4EE4-9E63-A56DC7888B8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3399176A-1119-4EE4-9E63-A56DC7888B8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3399176A-1119-4EE4-9E63-A56DC7888B8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8944F261-4F5C-418B-9F43-8176262A996A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8944F261-4F5C-418B-9F43-8176262A996A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8944F261-4F5C-418B-9F43-8176262A996A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8944F261-4F5C-418B-9F43-8176262A996A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

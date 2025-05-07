@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+		<Nullable>enable</Nullable>
+		<!--<UseWPF>true</UseWPF>-->
+		<LangVersion>preview</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Version Condition="'$(Version)' == ''">0.0.0</Version>
+		<AssemblyName>$(MSBuildProjectName).$(Version)</AssemblyName>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Jint" Version="4.2.2" />
+		<PackageReference Include="log4net" Version="3.0.4" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="Quicker">
+			<HintPath>C:\Program Files\Quicker\Quicker.exe</HintPath>
+		</Reference>
+		<Reference Include="Quicker.Common">
+			<HintPath>C:\Program Files\Quicker\Quicker.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="Quicker.Public">
+			<HintPath>C:\Program Files\Quicker\Quicker.Public.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+</Project>

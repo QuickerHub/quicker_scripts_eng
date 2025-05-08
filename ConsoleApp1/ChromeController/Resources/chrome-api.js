@@ -5,29 +5,25 @@ if (typeof chrome === 'undefined') {
 
 // API调用函数，处理回调
 function _callApi(apiName, params, callback) {
-    try {
-        // 确保参数是对象
-        params = params || {};
-        
-        // 调用.NET原生API
-        var result = _nativeApiCall(apiName, params);
-        
-        // 处理回调
-        if (typeof callback === 'function') {
-            // 直接调用回调函数
-            try {
-                callback(result);
-                log('[JS] 已执行回调');
-            } catch (err) {
-                log('[JS] 回调执行错误: ' + err);
-            }
+    // 确保参数是对象
+    params = params || {};
+
+    // 调用.NET原生API
+    var result = _nativeApiCall(apiName, params);
+
+    // 处理回调
+    if (typeof callback === 'function') {
+        // 直接调用回调函数
+        try {
+            callback(result);
+            log('[JS] 已执行回调');
+        } catch (err) {
+            log('[JS] 回调执行错误: ' + err);
+            throw err; // 将回调错误抛出
         }
-        
-        return result;
-    } catch (err) {
-        log('[JS] API调用错误: ' + err);
-        return { error: err.toString() };
     }
+
+    return result;
 }
 
 // 定义tabs API

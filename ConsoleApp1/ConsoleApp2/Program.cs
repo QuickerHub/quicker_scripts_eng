@@ -138,6 +138,32 @@ namespace ConsoleApp1
             engine.Execute(moreApisTest);
         }
 
+        // 添加API调用函数定义
+        static string apiCallFunctionDefinition = 
+        """
+        function _callApi(apiName, params, callback) {
+            // 确保参数是对象
+            params = params || {};
+            
+            // 调用.NET原生API
+            var result = _nativeApiCall(apiName, params);
+            
+            // 处理回调
+            if (typeof callback === 'function') {
+                // 直接调用回调函数
+                try {
+                    callback(result);
+                    log('[JS] 已执行回调');
+                } catch (err) {
+                    log('[JS] 回调执行错误: ' + err);
+                    throw err; // 将回调错误抛出
+                }
+            }
+            
+            return result;
+        }
+        """;
+
         static void TestGrouperClass(ScriptEngineWrapper engine)
         {
             Console.WriteLine("\n4. 测试Grouper类功能:");
@@ -145,32 +171,7 @@ namespace ConsoleApp1
             // 定义Grouper类
             string grouperClassDefinition =
 """
-/**
- * 自定义URL类，主要用于获取hostname
- */
-class URL {
-    /**
-     * 创建URL对象
-     * @param {String} url URL字符串
-     */
-    constructor(url) {
-        // 解析hostname
-        let withoutProtocol = url;
-        if (url.indexOf('://') > -1) {
-            withoutProtocol = url.split('://')[1];
-        }
-        
-        // 获取域名部分（忽略路径和其他组件）
-        let domainPart = withoutProtocol.split('/')[0];
-        
-        // 移除端口号（如果有）
-        if (domainPart.indexOf(':') > -1) {
-            domainPart = domainPart.split(':')[0];
-        }
-        
-        this.hostname = domainPart;
-    }
-}
+
 
 class grouper {
     /**

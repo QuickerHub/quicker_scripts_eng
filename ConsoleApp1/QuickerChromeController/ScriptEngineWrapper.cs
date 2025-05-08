@@ -88,8 +88,9 @@ namespace QuickerChromeController
             catch (Exception ex)
             {
                 Debug.WriteLine($"JavaScript Error: {ex.Message}");
+                throw ex;
                 // Optionally rethrow or return an error indicator
-                return JsValue.Undefined;
+                //return JsValue.Undefined;
             }
         }
 

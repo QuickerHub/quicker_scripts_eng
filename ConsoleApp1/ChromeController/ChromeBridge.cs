@@ -142,7 +142,7 @@ public class ChromeBridge
                     if (apiName.StartsWith("api_") || apiName.Contains("_"))
                     {
                         Console.WriteLine($"[ChromeBridgeMVP] 调用API: {apiName} (简化实现)");
-                        return RunBackgroundCommand(apiName, parameters);
+                        return GetMockResultForApi(apiName, parameters);
                     }
                     
                     Console.WriteLine($"[ChromeBridgeMVP] 未实现的API: {apiName}");

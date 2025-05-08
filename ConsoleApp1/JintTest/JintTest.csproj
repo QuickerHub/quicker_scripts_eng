@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>net472</TargetFramework>
+	  <Nullable>enable</Nullable>
+	  <!--<UseWPF>true</UseWPF>-->
+	  <LangVersion>preview</LangVersion>
+	  <OutputType>Exe</OutputType>
+	  <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QuickerChromeController\QuickerChromeController.csproj" />
+  </ItemGroup>
+
+</Project>
